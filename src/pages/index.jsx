@@ -10,7 +10,6 @@ const Homepage = () => {
     return (
         <div className="w-full center flex-col bg-primary">
             <Hero />
-            <Wallets />
             <Subscription />
             <Works />
             <TrendingNfts />
