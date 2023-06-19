@@ -1,12 +1,12 @@
-import WebRoute from "./routes"
+import WebRoute from "./routes";
+import { WalletProvider } from "./context/WalletContext";
 
-function App() {
-
+const App = () => {
   return (
-    <>
+    <WalletProvider>
       <WebRoute />
-    </>
-  )
-}
+    </WalletProvider>
+  );
+};
 
-export default App
+export default App;

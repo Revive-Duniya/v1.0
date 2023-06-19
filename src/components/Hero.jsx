@@ -34,8 +34,8 @@ const Hero = () => {
 
     return (
         <>
-            <div className="w-[90%] py-28 between">
-                <div className="w-[50%] flex gap-4 flex-col">
+            <div className="w-[90%] py-20 between">
+                <div className="w-[48%] flex gap-4 flex-col">
                     <h1 className="text-[3.5rem] text-white oxanium uppercase font-bold leading-[60px]">
                         <span className="text-yellow">Revive Duniya: </span>Unleash the Power of a Reborn World!
                     </h1>
@@ -65,35 +65,35 @@ const Hero = () => {
                         className={`nft-1 center flex-col gap-4 rounded-[2rem] p-[1rem] ${activeCard === 'survivalist' ? 'z-10 transition-all duration-500 transform translate-y-0 scale-1' : 'transition-all duration-500 transform translate-y-10 scale-0.9'}`}
                         onClick={() => handleClick('survivalist')}
                     >
-                        <img src={nftOne} alt="nft" width={200} height={200}/>
-                        <div className="text-white text-md center flex-col oxanium font-light">
+                        <img src={nftOne} alt="nft" width={300} height={300} className="rounded-[20px]"/>
+                        <div className="text-yellow font-bold text-md center flex-col oxanium">
                             <p className="capitalize">The Survivalist</p>
-                            <p className="mb-4">$2,000</p>
+                            <p className="mb-4">DUN 2,000</p>
                         </div>
                     </div>
                     <div
                         className={`nft-1 center flex-col gap-4 rounded-[2rem] p-[1rem] absolute ${activeCard === 'labourer' ? 'z-10 transition-all duration-500 transform translate-y-0 scale-1' : 'transition-all duration-500 transform translate-y-10 scale-0.9'}`}
                         onClick={() => handleClick('labourer')}
                     >
-                        <img src={nftTwo} alt="nft" width={200} height={200}/>
-                        <div className="text-white text-md center flex-col oxanium  font-light">
+                        <img src={nftTwo} alt="nft" width={300} height={300} className="rounded-[20px]"/>
+                        <div className="text-yellow font-bold  text-md center flex-col oxanium">
                             <p className="capitalize">The Labourer</p>
-                            <p className="mb-4">$5,000</p>
+                            <p className="mb-4">DUN 5,000</p>
                         </div>
                     </div>
                     <div
                         className={`nft-1 center flex-col gap-4 rounded-[2rem] p-[1rem] ${activeCard === 'forager' ? 'z-10 transition-all duration-500 transform translate-y-0 scale-1' : 'transition-all duration-500 transform translate-y-10 scale-0.9'}`}
                         onClick={() => handleClick('forager')}
                     >
-                        <img src={nftThree} alt="nft" width={200} height={200}/>
-                        <div className="text-white text-md center flex-col oxanium font-light">
+                        <img src={nftThree} alt="nft" width={300} height={300} className="rounded-[20px]"/>
+                        <div className="text-yellow font-bold text-md center flex-col oxanium">
                             <p className="capitalize">The Forager</p>
-                            <p className="mb-4">$4,000</p>
+                            <p className="mb-4">DUN 4,000</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="w-full -mt-[12rem] bottom-0">
+            <div className="w-full -mt-[10rem] bottom-0">
                 <img src={MilkyWay} alt="Milkyway"/>
             </div>
         </>
