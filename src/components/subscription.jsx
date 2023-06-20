@@ -22,6 +22,10 @@ const Subscription = () => {
                         <AiOutlineCheckSquare color="#460b3e" />
                         <p className="text-[.9rem] text-primary">Watch and earn</p>
                     </div>
+                    <div className="items-start flex gap-3">
+                        <AiOutlineCheckSquare color="#460b3e" />
+                        <p className="text-[.9rem] text-primary">Participate in tournaments</p>
+                    </div>
                 </div>
                 
             
@@ -35,7 +39,7 @@ const Subscription = () => {
             {/* Rent Subscription */}
             <div className="p-6 bg-white rounded-lg flex flex-col justify-between items-center h-full shadow w-[30%]">
                 <p className="uppercase text-black oxanium tracking-widest font-bold mb-4 center">Rent a character</p>
-                <h3 className="lato text-[3rem] font-bold leading-[50px] text-center text-primary">Monthly subscription</h3>
+                <h3 className="lato text-[3rem] font-bold leading-[50px] text-center text-primary">Pay per day</h3>
 
                 <div className="">
                     <div className="items-start flex gap-3">
@@ -48,7 +52,11 @@ const Subscription = () => {
                     </div>
                     <div className="items-start flex gap-3">
                         <AiOutlineCheckSquare color="#460b3e" />
-                        <p className="text-[.9rem] text-primary">Play and earn</p>
+                        <p className="text-[.9rem] text-primary">Participate in tournaments</p>
+                    </div>
+                    <div className="items-start flex gap-3">
+                        <AiOutlineCheckSquare color="#460b3e" />
+                        <p className="text-[.9rem] text-primary">Joined priced tournaments</p>
                     </div>
                 </div>
                 
@@ -63,7 +71,7 @@ const Subscription = () => {
             {/* Purchase Subscription */}
             <div className="p-6 bg-white rounded-lg flex flex-col justify-between items-center h-full shadow w-[30%]">
                 <p className="uppercase text-black oxanium tracking-widest font-bold mb-4 center">Buy a character</p>
-                <h3 className="lato text-[3rem] font-bold leading-[50px] text-center text-primary">One time subscription</h3>
+                <h3 className="lato text-[3rem] font-bold leading-[50px] text-center text-primary">Monthly subscription</h3>
 
                 <div className="">
                     <div className="items-start flex gap-3">

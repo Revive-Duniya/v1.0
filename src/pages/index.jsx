@@ -1,5 +1,4 @@
 import Hero from "../components/Hero";
-import Wallets from "../components/wallets";
 import Works from "../components/works";
 import TrendingNfts from "../components/trending";
 import Subscribe from "../components/subscribe";

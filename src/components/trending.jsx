@@ -80,6 +80,16 @@ const TrendingNfts = () => {
             {selectedNFT.about}
           </p>
         </div>
+        <div className="flex mt-6 flex-col gap-4 oxanium font-bold text-black w-full">
+          <div className="between w-5/6">
+            <p>Buy:</p>
+            <p>{selectedNFT.price} DUN</p>
+          </div>
+          <div className="between w-5/6">
+            <p>Rent:</p>
+            <p>{selectedNFT.rent} DUN</p>
+          </div>
+        </div>
         <div className="border border-black center rounded-md h-[3.5rem] p-[3px] mt-10 w-5/6">
             <input type="text" name="text" id="text" placeholder="Enter coupon code" className="w-[80%] bg-white outline-none border-none pl-6 text-black oxanium text-sm center"/>
             <button className="bg-black text-white h-full w-[20%] text-sm capitalize oxanium center rounded">

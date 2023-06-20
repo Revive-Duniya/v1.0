@@ -55,20 +55,22 @@ const NavBar = () => {
     <div className="py-3 w-full center bg-primary">
       <div className="w-[90%] between">
         <div className="h-[60px] w-[60px] center">
-          <img src={Logo} alt="logo" />
+          <Link to='/'>
+            <img src={Logo} alt="logo" />
+          </Link>
         </div>
         <ul className="bg-gradient backdrop-blur-20 h-[45px] w-1/2 uppercase oxanium text-white text-[0.7rem] center gap-6">
           <li className="hover:scale-105 duration-300 transition cursor-pointer">
             <Link to={LANDING_PAGE_URL}>Home</Link>
           </li>
           <li className="hover:scale-105 duration-300 transition cursor-pointer">
-            Rankings
+            <Link to={NFT_PAGE}>Marketplace</Link>
+          </li>
+          <li className="hover:scale-105 duration-300 transition cursor-pointer">
+            Inventory
           </li>
           <li className="hover:scale-105 duration-300 transition cursor-pointer">
             Competitions
-          </li>
-          <li className="hover:scale-105 duration-300 transition cursor-pointer">
-            <Link to={NFT_PAGE}>Marketplace</Link>
           </li>
         </ul>
         <div className="center gap-3">
