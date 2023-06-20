@@ -19,7 +19,7 @@ const CustomButton = ({
   return (
     <button
       style={buttonStyle}
-      className="center rounded-md text-[.9rem] focus:outline-none capitalize font-bold hover:scale-95 transition duration-300 oxanium"
+      className="center gap-2 rounded-md text-[.8rem] focus:outline-none capitalize font-bold hover:scale-95 transition duration-300 oxanium w-full"
       onClick={onClick}
       id="accountId"
     >

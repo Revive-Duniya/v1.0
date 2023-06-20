@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { LANDING_PAGE_URL, NFT_PAGE, LOGIN_SUCCESS, SIGN_UP_OPTIONS, PURCHASE_NFT, OWNED_NFTS } from "../utils/pages";
+import { LANDING_PAGE_URL, NFT_PAGE, LOGIN_SUCCESS, PURCHASE_NFT, OWNED_NFTS } from "../utils/pages";
 import { WalletProvider } from "../context/WalletContext";
 import NavBar from "../components/Navbar";
 import SkeletonLoader from "react-loading-skeleton";
@@ -9,7 +9,6 @@ import NotFoundPage from "../components/404";
 const Homepage = React.lazy(() => import("../pages/index"));
 const Marketplace = React.lazy(() => import("../pages/marketplace/index"));
 const LoginSuccess = React.lazy(() => import("../pages/loginSuccess/index"));
-const SignUpOptions = React.lazy(() => import("../pages/signUpOptions/index"));
 // const OwnedNFTs = React.lazy(() => import("../pages/owned-nft/index"));
 // const PurchaseNFT = React.lazy(() => import("../pages/purchase-nft/index"));
 
@@ -23,7 +22,6 @@ const WebRoute = () => {
             <Route path={LANDING_PAGE_URL} element={<Homepage />} />
             <Route path={NFT_PAGE} element={<Marketplace />} />
             <Route path={LOGIN_SUCCESS} element={<LoginSuccess />} />
-            <Route path={SIGN_UP_OPTIONS} element={<SignUpOptions />} />
             <Route path="*" element={<NotFoundPage />} />
             {/* <Route path={OWNED_NFTS} element={<OwnedNFTs />} />
             <Route path={PURCHASE_NFT} element={<PurchaseNFT />} /> */}

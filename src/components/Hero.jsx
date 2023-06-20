@@ -42,7 +42,7 @@ const Hero = () => {
                     <p className="paragraph text-md lato font-light leading-[25px] -mt-3">
                         Join these characters in their fight for survival and quest to build a new, and more sustainable world where man and his environment are safer, healthier and happier.
                     </p>
-                    <div className="flex gap-6 z-20 mt-6">
+                    <div className="flex gap-6 z-20 mt-6 w-4/6">
                         <CustomButton 
                             padding="1rem 2rem"
                             backgroundColor="#fcb70c"
