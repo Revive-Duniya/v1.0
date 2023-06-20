@@ -7,8 +7,12 @@ import UserProfile from "../assets/images/UserProfile.png";
 import Logo from "../assets/images/logo.png";
 import detectEthereumProvider from "@metamask/detect-provider";
 import { WalletContext } from "../context/WalletContext";
+<<<<<<< HEAD
 import { LANDING_PAGE_URL, NFT_PAGE } from "../utils/pages";
 import { formatBalance } from "../utils/wallet";
+=======
+import { LANDING_PAGE_URL, NFT_PAGE, SUBSCRIPTIONS_PAGE } from "../utils/pages";
+>>>>>>> ae8f61e2aa8a55060a4def0ddb8d176a315bef63
 
 const NavBar = () => {
   const [hasProvider, setHasProvider] = useState(null);
@@ -96,6 +100,9 @@ const NavBar = () => {
         <ul className="bg-gradient backdrop-blur-20 h-[45px] w-1/2 uppercase oxanium text-white text-[0.7rem] center gap-6">
           <li className="hover:scale-105 duration-300 transition cursor-pointer">
             <Link to={LANDING_PAGE_URL}>Home</Link>
+          </li>
+          <li className="hover:scale-105 duration-300 transition cursor-pointer">
+            <Link to={SUBSCRIPTIONS_PAGE}>Subscription</Link>
           </li>
           <li className="hover:scale-105 duration-300 transition cursor-pointer">
             <Link to={NFT_PAGE}>Marketplace</Link>
