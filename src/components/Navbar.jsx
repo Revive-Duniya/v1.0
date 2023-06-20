@@ -7,12 +7,8 @@ import UserProfile from "../assets/images/UserProfile.png";
 import Logo from "../assets/images/logo.png";
 import detectEthereumProvider from "@metamask/detect-provider";
 import { WalletContext } from "../context/WalletContext";
-<<<<<<< HEAD
-import { LANDING_PAGE_URL, NFT_PAGE } from "../utils/pages";
-import { formatBalance } from "../utils/wallet";
-=======
 import { LANDING_PAGE_URL, NFT_PAGE, SUBSCRIPTIONS_PAGE } from "../utils/pages";
->>>>>>> ae8f61e2aa8a55060a4def0ddb8d176a315bef63
+import { formatBalance } from "../utils/wallet";
 
 const NavBar = () => {
   const [hasProvider, setHasProvider] = useState(null);
@@ -76,10 +72,11 @@ const NavBar = () => {
       method: "eth_getBalance",
       params: [address, "latest"],
     });
-
+  
     setWalletState((prevWalletState) => ({ ...prevWalletState, address, balance }));
-    updateWallet({ address, balance });
+    updateWallet([ address, balance ]); // Pass an object as an argument
   };
+  
 
   const openModal = () => {
     setIsModalOpen(true);
