@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { trendingNFT } from "../utils/trending";
 import likeButton from "../assets/icons/like.png";
 import closeIcon from "../assets/icons/close.png";
@@ -97,8 +98,8 @@ const TrendingNfts = () => {
                   </button>
               </div>
               <div className="w-[85%] between mt-10">
-                  <button className="border-black text-black border font-bold h-[3rem] w-[45%] text-sm capitalize oxanium center rounded hover:scale-95 transition duration-300">Rent Character</button>
-                  <button className="bg-black text-white h-[3rem] w-[45%] text-sm capitalize oxanium center rounded hover:scale-95 transition duration-300">Purchase Character</button>
+                <button className="border-black text-black border font-bold h-[3rem] w-[45%] text-sm capitalize oxanium center rounded hover:scale-95 transition duration-300">Rent Character</button>
+                <button className="bg-black text-white border h-[3rem] w-[45%] text-sm capitalize oxanium center rounded hover:scale-95 transition duration-300">Purchase Character</button>
               </div>
             </div>
           </div>

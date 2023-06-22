@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import CustomButton from "./common/button";
 import nftOne from '../assets/images/nft1.png';
 import nftTwo from '../assets/images/nftTwo.png';
@@ -43,21 +44,25 @@ const Hero = () => {
                         Join these characters in their fight for survival and quest to build a new, and more sustainable world where man and his environment are safer, healthier and happier.
                     </p>
                     <div className="flex gap-6 z-20 mt-6 w-4/6">
-                        <CustomButton 
-                            padding="1rem 2rem"
-                            backgroundColor="#fcb70c"
-                            textColor="#000000"
-                        >
-                            Explore NFTs
-                        </CustomButton>
-                        <CustomButton
-                            padding="1rem 2rem"
-                            textColor="#fcb70c"
-                            borderColor="1px solid #fcb70c"
-                            backgroundColor="transparent"
-                        >
-                            Play Now
-                        </CustomButton>
+                        <Link to='/marketplace' className="w-1/2">
+                            <CustomButton 
+                                padding="1rem 2rem"
+                                backgroundColor="#fcb70c"
+                                textColor="#000000"
+                            >
+                                Explore NFTs
+                            </CustomButton>
+                        </Link>
+                        <Link to='/' className="w-1/2">
+                            <CustomButton
+                                padding="1rem 2rem"
+                                textColor="#fcb70c"
+                                borderColor="1px solid #fcb70c"
+                                backgroundColor="transparent"
+                            >
+                                Play Now
+                            </CustomButton>
+                        </Link>
                     </div>
                 </div>
                 <div className="center gap-6 w-1/2 relative">

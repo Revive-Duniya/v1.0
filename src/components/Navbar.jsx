@@ -7,7 +7,7 @@ import UserProfile from "../assets/images/UserProfile.png";
 import Logo from "../assets/images/logo.png";
 import detectEthereumProvider from "@metamask/detect-provider";
 import { WalletContext } from "../context/WalletContext";
-import { LANDING_PAGE_URL, NFT_PAGE, SUBSCRIPTIONS_PAGE } from "../utils/pages";
+import { LANDING_PAGE_URL, NFT_PAGE, SUBSCRIPTIONS_PAGE, INVENTORY, COMPETITION } from "../utils/pages";
 import { formatBalance } from "../utils/wallet";
 
 const NavBar = () => {
@@ -99,16 +99,16 @@ const NavBar = () => {
             <Link to={LANDING_PAGE_URL}>Home</Link>
           </li>
           <li className="hover:scale-105 duration-300 transition cursor-pointer">
-            <Link to={SUBSCRIPTIONS_PAGE}>Subscription</Link>
-          </li>
-          <li className="hover:scale-105 duration-300 transition cursor-pointer">
             <Link to={NFT_PAGE}>Marketplace</Link>
           </li>
           <li className="hover:scale-105 duration-300 transition cursor-pointer">
-            Inventory
+            <Link to={INVENTORY}>Inventory</Link>
           </li>
           <li className="hover:scale-105 duration-300 transition cursor-pointer">
-            Competitions
+            <Link to={COMPETITION}>Competitions</Link>
+          </li>
+          <li className="hover:scale-105 duration-300 transition cursor-pointer">
+            <Link to={SUBSCRIPTIONS_PAGE}>Collections</Link>
           </li>
         </ul>
         <div className="center gap-3">
@@ -116,9 +116,6 @@ const NavBar = () => {
             <>
               <div className="text-white text-[.9rem] oxanium">
                 Wallet Balance: {formatBalance(walletState.balance)}
-              </div>
-              <div className="rounded-full hover:scale-95 transition duration-300">
-                <img src={UserProfile} alt="user profile image" />
               </div>
             </>
           ) : (
@@ -130,11 +127,8 @@ const NavBar = () => {
                 onClick={openModal}
                 disabled={isConnecting}
               >
-                Sign Up
+                Login / Sign Up
               </CustomButton>
-              <div className="rounded-full hover:scale-95 transition duration-300">
-                <img src={UserProfile} alt="user profile image" />
-              </div>
             </>
           )}
         </div>

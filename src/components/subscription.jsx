@@ -9,7 +9,7 @@ const Subscription = () => {
         <h2 className="text-center oxanium text-[3.5rem] w-full capitalize text-white">Play how you want</h2>
         <div className="flex h-[400px] between w-5/6">
             {/* Free Subscription */}
-            <div className="p-6 bg-white rounded-lg flex flex-col justify-between items-center h-full shadow w-[30%]">
+            <div className="p-6 bg-[#AAAAAA] cursor-not-allowed rounded-lg flex flex-col justify-between items-center h-full shadow w-[30%]">
                 <p className="uppercase text-black oxanium tracking-widest font-bold mb-4 center">Free to play</p>
                 <h3 className="lato text-[5rem] font-bold text-center text-primary">Zero</h3>
 
@@ -30,7 +30,7 @@ const Subscription = () => {
                 
             
                 <Link to={NFT_PAGE} className="w-full">
-                    <button className="py-3 oxanium tracking-widest w-full bg-primary text-white rounded-md text-sm hover:scale-95 transition duration-300">
+                    <button className="py-3 oxanium tracking-widest w-full bg-primary text-white rounded-md text-sm cursor-not-allowed">
                         Select
                     </button>
                 </Link>
