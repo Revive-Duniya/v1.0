@@ -3,30 +3,29 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { NFT_PAGE } from "../../utils/pages";
 import axios from "axios";
-import { WalletContext } from "../../context/WalletContext";
 import SadFace from '../../assets/images/sadface.png';
 import HappyFace from '../../assets/images/happyFace.png'
 
 const Subscription = () => {
-  const { wallet } = useContext(WalletContext);
+  // const { wallet } = useContext(WalletContext);
   const [isSubscribed, setSubscribed] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const { data } = await axios.get(`http://localhost:3000/api/userSubscribed?address=${wallet.address}`);
-        setSubscribed(data?.data?.isUserSubscribed);
-        setLoading(false);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const { data } = await axios.get(`http://localhost:3000/api/userSubscribed?address=${wallet.address}`);
+  //       setSubscribed(data?.data?.isUserSubscribed);
+  //       setLoading(false);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
 
-    if (wallet && wallet.address) {
-      getData();
-    }
-  }, [wallet]);
+  //   if (wallet && wallet.address) {
+  //     getData();
+  //   }
+  // }, [wallet]);
 
   return (
     <div className="bg-primary w-full center flex-col pb-2">
