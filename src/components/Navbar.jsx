@@ -1,82 +1,16 @@
-import { useState, useContext, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
-import { BiWalletAlt }from 'react-icons/bi';
+import { BiWalletAlt } from 'react-icons/bi';
 import CustomButton from "./common/button";
-import UserProfile from "../assets/images/UserProfile.png";
 import Logo from "../assets/images/logo.png";
-import detectEthereumProvider from "@metamask/detect-provider";
-import { WalletContext } from "../context/WalletContext";
 import { LANDING_PAGE_URL, NFT_PAGE, SUBSCRIPTIONS_PAGE, INVENTORY, COMPETITION } from "../utils/pages";
-import { formatBalance } from "../utils/wallet";
+import { pairHashpack } from "../hashconnect";
 
 const NavBar = () => {
-  const [hasProvider, setHasProvider] = useState(null);
-  const [walletState, setWalletState] = useState({ address: "", balance: "" });
-  const [isConnecting, setIsConnecting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { updateWallet } = useContext(WalletContext);
-
-  useEffect(() => {
-    const storedWallet = localStorage.getItem("wallet");
-    if (storedWallet) {
-      const parsedWallet = JSON.parse(storedWallet);
-      setWalletState(parsedWallet);
-    }
-
-    checkWalletConnection(); // Check for existing connection on component mount
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("wallet", JSON.stringify(walletState));
-  }, [walletState]);
-
-  const checkWalletConnection = async () => {
-    try {
-      const provider = await detectEthereumProvider();
-      setHasProvider(Boolean(provider));
-
-      if (provider && provider.selectedAddress) {
-        handleUpdateWallet(provider.selectedAddress);
-      } else {
-        setWalletState({ address: "", balance: "" }); // Clear wallet state if not connected
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const connectWallet = async () => {
-    setIsConnecting(true);
-
-    try {
-      const provider = await detectEthereumProvider({ silent: true });
-      setHasProvider(Boolean(provider));
-
-      if (provider) {
-        const accounts = await provider.request({ method: "eth_requestAccounts" });
-        if (accounts.length > 0) {
-          handleUpdateWallet(accounts[0]);
-          closeModal(); // Close the modal after successful connection
-        }
-      }
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setIsConnecting(false);
-    }
-  };
-
-  const handleUpdateWallet = async (address) => {
-    const balance = await window.ethereum.request({
-      method: "eth_getBalance",
-      params: [address, "latest"],
-    });
-  
-    setWalletState((prevWalletState) => ({ ...prevWalletState, address, balance }));
-    updateWallet([ address, balance ]); // Pass an object as an argument
-  };
-  
+  const [walletAddress, setWalletAddress] = useState('');
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -84,6 +18,12 @@ const NavBar = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleLogin = async () => {
+    const saveData = await pairHashpack(setWalletAddress, setLoggedIn, closeModal);
+    setWalletAddress(saveData.pairingData.accountIds[0]);
+    setLoggedIn(true);
   };
 
   return (
@@ -112,12 +52,8 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="center gap-3">
-          {walletState.address ? (
-            <>
-              <div className="text-white text-[.9rem] oxanium">
-                Wallet Balance: {formatBalance(walletState.balance)}
-              </div>
-            </>
+          {isLoggedIn ? (
+            <p className="text-white oxanium">{walletAddress}</p>
           ) : (
             <>
               <CustomButton
@@ -125,7 +61,6 @@ const NavBar = () => {
                 backgroundColor="#fcb70c"
                 textColor="#000000"
                 onClick={openModal}
-                disabled={isConnecting}
               >
                 Login / Sign Up
               </CustomButton>
@@ -145,12 +80,11 @@ const NavBar = () => {
             </div>
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="password" className="text-sm lato items-start text-left">Password: </label>
-              <input type="password" name="text" id="text" placeholder="Enter your email" className="oxanium text-sm py-3 pl-3 rounded-md outline-none border border-white text-white bg-[transparent]" />
+              <input type="password" name="password" id="password" placeholder="Enter your password" className="oxanium text-sm py-3 pl-3 rounded-md outline-none border border-white text-white bg-[transparent]" />
             </div>
             <button
-              className="text-black oxanium font-bold text-sm py-3 rounded-lg mb-2 center gap-2 w-full bg-yellow cursor-not-allowed"
-              onClick={connectWallet}
-              disabled={isConnecting}
+              className="text-black oxanium font-bold text-sm py-3 rounded-lg mb-2 center gap-2 w-full bg-yellow"
+              onClick={handleLogin}
             >
               Login / Sign Up
             </button>
@@ -167,11 +101,10 @@ const NavBar = () => {
                 padding=".8rem 1.7rem"
                 backgroundColor="#fcb70c"
                 textColor="#000000"
-                onClick={connectWallet}
-                disabled={isConnecting}
+                onClick={() => pairHashpack(setWalletAddress, setLoggedIn, closeModal)}
               >
-                <p>{isConnecting ? "Connecting..." : "Connect with wallet"}</p>
-                <div className=""><BiWalletAlt /></div>
+                <p>Connect with wallet</p>
+                <div><BiWalletAlt /></div>
               </CustomButton>
             </>
           </div>

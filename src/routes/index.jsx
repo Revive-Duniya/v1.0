@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LANDING_PAGE_URL, NFT_PAGE, LOGIN_SUCCESS, INVENTORY, COMPETITION, PURCHASE_NFT, OWNED_NFTS, SUBSCRIPTIONS_PAGE } from "../utils/pages";
-import { WalletProvider } from "../context/WalletContext";
 import NavBar from "../components/Navbar";
 import SkeletonLoader from "react-loading-skeleton";
 import NotFoundPage from "../components/404";
@@ -20,8 +19,7 @@ const WebRoute = () => {
   return (
     <Router>
       <Suspense fallback={<SkeletonLoader height={300} width={300} />}>
-        <WalletProvider>
-          <NavBar />
+        <NavBar />
           <Routes>
             <Route path={LANDING_PAGE_URL} element={<Homepage />} />
             <Route path={NFT_PAGE} element={<Marketplace />} />
@@ -34,7 +32,6 @@ const WebRoute = () => {
             {/* <Route path={OWNED_NFTS} element={<OwnedNFTs />} />
             <Route path={PURCHASE_NFT} element={<PurchaseNFT />} /> */}
           </Routes>
-        </WalletProvider>
       </Suspense>
     </Router>
   );
