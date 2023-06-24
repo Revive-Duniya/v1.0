@@ -31,3 +31,6 @@ Revive Duniya offers a unique gaming experience where you can:
 - Solidity
 - TailwindCSS
 - Hashpack
+
+- @codewithmide
+[![wakatime](https://wakatime.com/badge/user/fa7f7dfa-31c0-4185-8964-8be612dd48ed/project/0f682e5b-2e05-4304-ab02-bf309a06241a.svg)](https://wakatime.com/badge/user/fa7f7dfa-31c0-4185-8964-8be612dd48ed/project/0f682e5b-2e05-4304-ab02-bf309a06241a)
