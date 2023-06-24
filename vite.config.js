@@ -9,4 +9,9 @@ export default defineConfig({
     nodePolyfills(),
     commonjs(),
   ],
+  build: {
+    rollupOptions: {
+      plugins: [ nodePolyfills()],
+    }
+  }
 });
