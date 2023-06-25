@@ -15,7 +15,7 @@ const Works = () => {
                             <img src={walletIcon} width={40} height={40} alt="wallet icon" />
                         </div>
                         <div>
-                            <p className="lato text-sm leading-[28.15px] text-white">Create an account</p>
+                            <p className="lato text-sm leading-[28.15px] text-white">Create account</p>
                         </div>
                     </div>
                     <img src={NextStepIcon} width={100} alt="next step icon" className="-mt-10 mx-3" />
@@ -26,7 +26,7 @@ const Works = () => {
                             <img src={playNowIcon} width={40} height={40} alt="wallet icon" />
                         </div>
                         <div>
-                            <p className="lato text-sm leading-[28.15px] text-white">Buy/Rent a character</p>
+                            <p className="lato text-sm leading-[28.15px] text-white">Buy or Rent NFT</p>
                         </div>
                     </div>
                     <img src={NextStepIcon} width={100} alt="next step icon" className="-mt-10 mx-3" />
@@ -48,7 +48,7 @@ const Works = () => {
                             <img src={gamingIcon} width={40} height={40} alt="wallet icon" />
                         </div>
                         <div>
-                            <p className="lato text-sm leading-[28.15px] text-white">Start gaming</p>
+                            <p className="lato text-sm leading-[28.15px] text-white">Start playing</p>
                         </div>
                     </div>
                 </div>

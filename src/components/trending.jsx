@@ -18,8 +18,8 @@ const TrendingNfts = () => {
   return (
     <div className="w-[90%] my-28 text-white relative">
       <div>
-        <p className="gradient lato">Most used characters at the moment</p>
-        <h2 className="text-white text-[3rem] mb-6 leading-32 capitalize oxanium">Trending NFTs</h2>
+        <p className="gradient lato font-bold">UNLEASH YOUR POTENTIAL</p>
+        <h2 className="text-white text-[3rem] mb-6 leading-32 capitalize oxanium">Find your perfect NFT Character</h2>
       </div>
       <div className="between flex-wrap gap-3">
         {trendingNFT.map((trending, index) => (
@@ -54,7 +54,7 @@ const TrendingNfts = () => {
                 className="py-3 bg-primary w-full rounded-xl uppercase text-white border-yellow border mt-6 font-bold text-sm oxanium hover:scale-95 hover:bg-yellow hover:text-black transition duration-300"
                 onClick={() => openModal(trending)}
               >
-                Purchase
+                Buy
               </button>
             </div>
           </div>

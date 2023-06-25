@@ -38,7 +38,7 @@ const Hero = () => {
             <div className="w-[90%] py-20 between">
                 <div className="w-[48%] flex gap-4 flex-col">
                     <h1 className="text-[3.5rem] text-white oxanium uppercase font-bold leading-[60px]">
-                        <span className="text-yellow">Revive Duniya: </span>Unleash the Power of a Reborn World!
+                        <span className="text-yellow">Revive Duniya: </span>Harness the Power of a Reborn World!
                     </h1>
                     <p className="paragraph text-md lato font-light leading-[25px] -mt-3">
                         Join these characters in their fight for survival and quest to build a new, and more sustainable world where man and his environment are safer, healthier and happier.
@@ -53,7 +53,7 @@ const Hero = () => {
                                 Explore NFTs
                             </CustomButton>
                         </Link>
-                        <Link to='/' className="w-1/2">
+                        <a href="https://problemsome.itch.io/revive-duniya-demo-offline" rel="noreferrer" target="_blank" className="w-1/2">
                             <CustomButton
                                 padding="1rem 2rem"
                                 textColor="#fcb70c"
@@ -62,8 +62,9 @@ const Hero = () => {
                             >
                                 Play Now
                             </CustomButton>
-                        </Link>
+                        </a>
                     </div>
+                    <p className="text-yellow oxanium z-40">Game Demo password: <span className="text-white">reviveduniyatester</span></p>
                 </div>
                 <div className="center gap-6 w-1/2 relative">
                     <div

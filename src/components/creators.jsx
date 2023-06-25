@@ -4,7 +4,7 @@ const Creators = () => {
     return (
         <div className="w-[90%] my-10 text-white">
             <div>
-                <p className="gradient lato">Meet our top creators</p>
+                <p className="gradient lato">Top NFT Creators</p>
                 <h2 className="text-white text-[3rem] leading-[100px] capitalize oxanium mb-6">Top Creators</h2>
             </div>
             <div className="between flex-wrap gap-3">

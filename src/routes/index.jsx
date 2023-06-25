@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LANDING_PAGE_URL, NFT_PAGE, LOGIN_SUCCESS, INVENTORY, COMPETITION, PURCHASE_NFT, OWNED_NFTS, SUBSCRIPTIONS_PAGE } from "../utils/pages";
 import NavBar from "../components/Navbar";
 import NotFoundPage from "../components/404";
+import Loading from "../components/loading/customloader";
 
 const Homepage = React.lazy(() => import("../pages/index"));
 const Marketplace = React.lazy(() => import("../pages/marketplace/index"));
@@ -17,7 +18,7 @@ const Competition = React.lazy(() => import("../pages/competitons/index"));
 const WebRoute = () => {
   return (
     <Router>
-      <Suspense fallback={<div>Loading</div>}>
+      <Suspense fallback={<Loading />}>
         <NavBar />
           <Routes>
             <Route path={LANDING_PAGE_URL} element={<Homepage />} />

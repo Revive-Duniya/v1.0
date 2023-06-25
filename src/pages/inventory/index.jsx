@@ -21,7 +21,7 @@ const Inventory = () => {
     <div className="w-full flex-col center bg-primary">
       <div className="w-[90%] my-28 text-white relative bg-primary">
         <div>
-          <p className="gradient lato">Most used in-game inventories</p>
+          <p className="gradient lato">Buy What You Need</p>
           <h2 className="text-white text-[3rem] mb-6 leading-32 capitalize oxanium">inventory NFTs</h2>
         </div>
         <div className="between flex-wrap gap-3">
