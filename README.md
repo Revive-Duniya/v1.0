@@ -39,7 +39,6 @@ Moreover, the integration of NFTs within our project gives users greater control
 In summary, Hedera Hashgraph provides numerous benefits for our project. It improves the user experience by enabling low-fee transactions, offers fast data retrieval through Mirror Nodes, facilitates decentralized management of subscriptions and NFT assets using smart contracts, and empowers users with control over their digital assets. 
 
 ## Architecture
-Whats the workflow of the architecture?
 ![Architecture](https://github.com/Revive-Duniya/v1.0/blob/main/rd.PNG)
 We place significant trust in both mirror nodes and smart contracts in our frontend and game application. Smart contracts primarily handle transaction execution, while mirror nodes provide comprehensive data about user wallets. In the case of Hedera, it's important to note that gas fees are required for query transactions. However, we have implemented measures to enhance the user experience.
 
