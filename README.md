@@ -42,6 +42,39 @@ In summary, Hedera Hashgraph provides numerous benefits for our project. It impr
 ![Architecture](https://github.com/Revive-Duniya/v1.0/blob/main/rd.PNG)
 We place significant trust in both mirror nodes and smart contracts in our frontend and game application. Smart contracts primarily handle transaction execution, while mirror nodes provide comprehensive data about user wallets. In the case of Hedera, it's important to note that gas fees are required for query transactions. However, we have implemented measures to enhance the user experience.
 
+## DUN and GRC fungible tokens
+VALUE PROPOSITION: 
+
+We empower players to embark on an eco-conscious journey that blends entertainment, earning potential, real-world impact and positive change whilst immersing them in an immersive, AI-driven gaming experience. 
+
+
+TOKENS UTILITY (DEMAND)
+DUN token: in the game, DUN is used for valuable and exclusive purchases that affect the player’s performance. Demand for DUN will come from:
+ 
+Characters
+Special Vehicles
+Special Emotes
+Special Clothes
+Fighting styles
+Betting 
+NFT subscriptions
+Lending a NFT
+Buildings
+Governance 
+Staking 
+
+GRC Token: in the game, GRC is used for more generic purchases. Such as: 
+
+Food
+Skins
+Farm Animals 
+Farming Equipments 
+Rewards 
+
+TOKENS SUPPLY
+DUN Token: DUN will be unlocked at a predetermined schedule lasting 60 months starting from the public sale of DUN, ensuring a gradual release and reducing the risk of token dumping. The total token supply for DUN is 300,000,000 tokens. The initial circulating supply is set at 75,000,000 DUN i.e 25% of the total supply. 
+
+GRC Token: the initial mint amount for GRC is set at 30,000,000 GRC. After the initial mint, a 3% (transaction fee) of each GRC transaction will be burned manually to reduce the over-supply and over-circulation of GRC.
 ## Technologies
 
 - ReactJS
