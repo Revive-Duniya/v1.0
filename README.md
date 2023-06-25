@@ -23,6 +23,22 @@ Revive Duniya offers a unique gaming experience where you can:
 - **Real-time Challenges**: Experience dynamic events and missions that reflect real-world environmental situations and test your problem-solving abilities.
 - **Social Interaction**: Connect with a vibrant community of like-minded players, exchange ideas, and collaborate on environmental projects.
 - **Progressive Gameplay**: Unlock new features, abilities, and game elements as you progress, and unlock achievements for your sustainable accomplishments.
+##Architecture
+How can Hedera Hashgraph enhance our project?
+
+Hedera Hashgraph offers several advantages that greatly benefit our project. One of the key benefits is its ability to enhance the user experience. In traditional blockchain networks, high gas transaction fees can be a significant barrier for users, especially when engaging in activities like playing games. However, with Hedera Hashgraph, we can execute transactions with remarkably low fees, significantly improving the overall user experience.
+
+Furthermore, Hedera Hashgraph provides Mirror Nodes, a cutting-edge technology that enables us to retrieve data about users' NFTs, tokens, and other relevant information swiftly. This capability allows us to get data very fast compared to traditional blockchains.
+
+By leveraging smart contracts on Hedera Hashgraph, we can embrace a decentralized approach to managing subscriptions and NFT assets. This decentralized framework instills trust in our users, as they can rely on the transparency and security offered by smart contracts.
+
+Moreover, the integration of NFTs within our project gives users greater control over their digital assets and a clear understanding of what is happening within the ecosystem. This feature empowers users, ensuring they have ownership and visibility over their virtual possessions.
+
+In summary, Hedera Hashgraph provides numerous benefits for our project. It improves the user experience by enabling low-fee transactions, offers fast data retrieval through Mirror Nodes, facilitates decentralized management of subscriptions and NFT assets using smart contracts, and empowers users with control over their digital assets. 
+
+Whats the workflow of the architecture?
+![Architecture](https://github.com/Revive-Duniya/v1.0/blob/main/rd.PNG)
+We place significant trust in both mirror nodes and smart contracts in our frontend and game application. Smart contracts primarily handle transaction execution, while mirror nodes provide comprehensive data about user wallets. In the case of Hedera, it's important to note that gas fees are required for query transactions. However, we have implemented measures to enhance the user experience.
 
 ## Technologies
 
