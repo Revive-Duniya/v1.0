@@ -79,6 +79,10 @@ GRC Token: the initial mint amount for GRC is set at 30,000,000 GRC. After the i
 
 - ReactJS
 - JavaScript
+- Hedera Smart Contract Service
+- Hedera Token Service
+- Hedera Nirror Nodes
+- Hedera SDK
 - Solidity
 - TailwindCSS
 - Hashpack
