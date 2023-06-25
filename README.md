@@ -23,7 +23,9 @@ Revive Duniya offers a unique gaming experience where you can:
 - **Real-time Challenges**: Experience dynamic events and missions that reflect real-world environmental situations and test your problem-solving abilities.
 - **Social Interaction**: Connect with a vibrant community of like-minded players, exchange ideas, and collaborate on environmental projects.
 - **Progressive Gameplay**: Unlock new features, abilities, and game elements as you progress, and unlock achievements for your sustainable accomplishments.
-##Architecture
+- 
+## Use of Hedera
+
 How can Hedera Hashgraph enhance our project?
 
 Hedera Hashgraph offers several advantages that greatly benefit our project. One of the key benefits is its ability to enhance the user experience. In traditional blockchain networks, high gas transaction fees can be a significant barrier for users, especially when engaging in activities like playing games. However, with Hedera Hashgraph, we can execute transactions with remarkably low fees, significantly improving the overall user experience.
@@ -36,6 +38,7 @@ Moreover, the integration of NFTs within our project gives users greater control
 
 In summary, Hedera Hashgraph provides numerous benefits for our project. It improves the user experience by enabling low-fee transactions, offers fast data retrieval through Mirror Nodes, facilitates decentralized management of subscriptions and NFT assets using smart contracts, and empowers users with control over their digital assets. 
 
+## Architecture
 Whats the workflow of the architecture?
 ![Architecture](https://github.com/Revive-Duniya/v1.0/blob/main/rd.PNG)
 We place significant trust in both mirror nodes and smart contracts in our frontend and game application. Smart contracts primarily handle transaction execution, while mirror nodes provide comprehensive data about user wallets. In the case of Hedera, it's important to note that gas fees are required for query transactions. However, we have implemented measures to enhance the user experience.
